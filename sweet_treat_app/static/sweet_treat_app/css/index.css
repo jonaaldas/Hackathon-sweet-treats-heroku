@@ -565,6 +565,10 @@ input:focus {
     outline: none;
   }
 
+  .hamburger-menu:hover {
+    cursor: pointer;
+  }
+
   /* Menu section | Enjoy section | Getyours section */
 
   .menu-text,
