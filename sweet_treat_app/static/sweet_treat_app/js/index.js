@@ -220,6 +220,7 @@ async function checkIfLoggedIn() {
 /////////////////////////////////////////////////////////////////////////////////////
 // User logged in already?
 /////////////////////////////////////////////////////////////////////////////////////
+const hideYummyTreatsLogin = document.getElementsByClassName("desserts-btn");
 const inventoryLinkEl = document.getElementById("inventory-link");
 const logOutEl = document.getElementById("log-out");
 
@@ -230,6 +231,7 @@ function isLoggedIn() {
   if (responseName === localStorage.getItem("name")) {
     signUpEl.classList.add("hidden");
     logInEl.classList.add("hidden");
+    hideYummyTreatsLogin[0].style.display = "none";
     logOutEl.classList.remove("hidden");
     inventoryLinkEl.classList.remove("hidden");
   }
