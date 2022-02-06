@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href=" {% static 'sweet_treat_app/img/favicon32.png' %} "
+    />
+    <link
+      rel="stylesheet"
+      href=" {% static 'sweet_treat_app/css/index.css' %} "
+    />
+    <link
+      rel="stylesheet"
+      href=" {% static 'sweet_treat_app/css/inventory.css' %} "
+    />
+
+    <title>Sweet Treats - Inventory</title>
+  </head>
+  <body>
+    <!-- Announcement Banner START -->
+    <section class="announcement-banner">
+      <p>
+        SIGN UP! -- and be added to our
+        <span class="brand">Sweet Treats</span> mailing list of sweetness!
+      </p>
+      <p id="announcement-btn" class="announcement-btn">X</p>
+    </section>
+    <!-- Announcement Banner END -->
+
+    <!-- Header START -->
+    <header class="inventory-main-header">
+      <nav class="width3 navigation-menu">
+        <ul class="nav-menu">
+          <li><a href="index.html">HOME</a></li>
+
+          <li><a href="sweets.html">SWEETS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+      <input id="hamburger-menu" class="hamburger-menu" type="checkbox" />
+
+      <div class="width3"><h1 class="brand">Sweet Treats</h1></div>
+      <div class="width3 log-in">
+        <!-- USE THIS FOR WELCOME USER-->
+        <p class="hello-user">Welcome back, <span id="welcome-user"></span>!</p>
+        <!-- USE THIS FOR WELCOME USER-->
+        <a id="log-out">LOGOUT</a>
+      </div>
+    </header>
+    <!-- Header END -->
+
+    <!-- INVENTORY SECTION START -->
+    <section>
+      <div class="inventory-cont">
+        <div class="inventory-sub-cont">
+          <div class="inner-inventory-cont order">
+            <div class="order-header-container">
+              <h2 class="our-menu">Our Menu</h2>
+              <p class="in-stock-header">Available</p>
+              <p class="out-of-stock-header">Unavailable</p>
+            </div>
+
+            <!-- our menu cont -->
+            <div class="inventory-item-container">
+              <p class="in-stock">Unavailable</p>
+              <div class="inventory-items">
+                <img
+                  class="img-item"
+                  src=" {% static 'sweet_treat_app/img/nutDream.jpg' %} "
+                  alt="ice cream cones"
+                />
+                <span class="price">$9.99</span>
+                <p class="shop-item">Amazing Nutty Dream!</p>
+                <button class="order-btn dark-button">Order</button>
+              </div>
+            </div>
+
+            <div class="inventory-item-container">
+              <p class="in-stock">Available</p>
+
+              <div class="inventory-items">
+                <img
+                  class="img-item"
+                  src=" {% static 'sweet_treat_app/img/dessert.jpg' %} "
+                  alt="ice cream plate with fruit"
+                />
+                <span class="price">$7.99</span>
+                <p class="shop-item">Super Sweet Plate!</p>
+                <button class="order-btn dark-button">Order</button>
+              </div>
+            </div>
+
+            <div class="inventory-item-container">
+              <p class="in-stock">Unavailable</p>
+
+              <div class="inventory-items">
+                <img
+                  class="img-item"
+                  src=" {% static 'sweet_treat_app/img/sweetBowl.jpg' %} "
+                  alt="ice cream cones"
+                />
+
+                <span class="price">$11.99</span>
+                <p class="shop-item">The Sweetness Bowl!</p>
+                <button class="order-btn dark-button">Order</button>
+              </div>
+            </div>
+
+            <div class="inventory-item-container">
+              <p class="in-stock">Available</p>
+
+              <div class="inventory-items">
+                <img
+                  class="img-item"
+                  src=" {% static 'sweet_treat_app/img/delicateWaffle.jpg' %} "
+                  alt="ice cream seller"
+                />
+
+                <span class="price">$6.99</span>
+                <p class="shop-item">Da' Delicate Waffle!</p>
+                <button class="order-btn dark-button">Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- shopping cart -->
+          <div class="inner-inventory-cont shopingCart">
+            <h2 class="being-prepared">Cart</h2>
+            <div class="pending-orders"></div>
+            <!-- cart total -->
+            <div class="total-price-cont">
+              <div class="price-cont">
+                <span class="total-price-title">Total</span>
+                <span class="total-price-value">$0.00</span>
+              </div>
+              <div class="checkout-btn-cont">
+                <button class="checkout-btn dark-button">Checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- INVENTORY SECTION END -->
+
+    <!-- Footer START -->
+    <footer class="footer-section">
+      <div class="address-text width2">
+        <div class="width3 address-text-content">
+          <h3>ADDRESS</h3>
+          <p>555 Sweets Dr. Sweetville,</p>
+          <p>SV 09283</p>
+        </div>
+        <div class="width3 address-text-content">
+          <h3>CONTACT</h3>
+          <p>info@sweets.io</p>
+          <p>Tel: 555-555-5555</p>
+        </div>
+        <div class="width3 address-text-content">
+          <h3>HOURS</h3>
+          <p>OPEN DAILY</p>
+          <p>8AM-8PM</p>
+        </div>
+      </div>
+
+      <div class="width2 social-img">
+        <h4><span class="brand">Sweet Treats</span> Social Networks</h4>
+        <p>Follow US on social media for the greatest social sweetness!</p>
+        <ul>
+          <li>
+            <a href="https://twitter.com"
+              ><img
+                src=" {% static 'sweet_treat_app/img/tweet.svg' %} "
+                alt="facebook icon social media"
+            /></a>
+          </li>
+          <li>
+            <a href="https://facebook.com"
+              ><img
+                src=" {% static 'sweet_treat_app/img/fb.svg' %} "
+                alt="twitter icon social media"
+            /></a>
+          </li>
+          <li>
+            <a href="https://instagram.com"
+              ><img
+                src=" {% static 'sweet_treat_app/img/instagram.svg' %} "
+                alt="instagram icon social media"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Footer END -->
+  </body>
+  <script src=" {% static 'sweet_treat_app/js/inventory.js' %} "></script>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href=" {% static 'sweet_treat_app/img/favicon32.png' %} "
+    />
+    <link
+      rel="stylesheet"
+      href=" {% static 'sweet_treat_app/css/index.css' %} "
+    />
+    <title>Sweet Treats</title>
+  </head>
+  <body>
+    <!-- Announcement Banner START -->
+    <aside class="announcement-banner">
+      <p>
+        SIGN UP! -- and be added to our
+        <span class="brand">Sweet Treats</span> mailing list of sweetness!
+      </p>
+      <p id="announcement-btn" class="announcement-btn">X</p>
+    </aside>
+    <!-- Announcement Banner END -->
+    <!-- Header START -->
+    <header class="main-header">
+      <nav class="width3 navigation-menu">
+        <ul class="nav-menu">
+          <li><a href="index.html">HOME</a></li>
+
+          <li><a href="sweets.html">SWEETS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li id="inventory-link" class="hidden">
+            <a href="inventory.html">ORDER</a>
+          </li>
+        </ul>
+      </nav>
+      <input id="hamburger-menu" class="hamburger-menu" type="checkbox" />
+      <!-- <img
+        id="hamburger-menu"
+        class="hamburger-menu"
+        src="{% static 'sweet_treat_app/img/hamburger.svg' %}"
+      /> -->
+
+      <div class="width3"><h1 class="brand">Sweet Treats</h1></div>
+      <div class="width3 log-in">
+        <a id="sign-up">SIGN UP</a>
+        <a id="log-in">LOG IN</a>
+        <a id="log-out" class="hidden">LOG OUT</a>
+      </div>
+    </header>
+    <!-- Header END -->
+
+    <!-- SIGN UP FORM START  -->
+    <section class="form-container animate hidden">
+      <button class="form-close-btn dark-button" type="button">X</button>
+      <div class="form-brand">
+        <h1 class="brand">Sweet Treats</h1>
+      </div>
+      <p>Don't miss out! <strong>Register NOW!</strong></p>
+      <div id="register-message" class="register-message"></div>
+      <form id="register" class="form-input-container" name="st-register">
+        <label for="name">Name:</label>
+        <input type="text" name="name" maxlength="256" required />
+        <label for="email">Email:</label>
+        <input type="email" name="email" maxlength="256" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" maxlength="256" required />
+        <button class="dark-button" type="submit">REGISTER</button>
+      </form>
+    </section>
+
+    <!-- SIGN UP FORM END -->
+
+    <!-- LOG IN FORM START  -->
+    <section class="form-container animate hidden">
+      <button class="form-close-btn dark-button" type="button">X</button>
+      <div class="form-brand">
+        <h1 class="brand">Sweet Treats</h1>
+      </div>
+      <p>Welcome back! <strong>Log in NOW!</strong></p>
+      <div id="login-message" class="login-message"></div>
+
+      <form id="login" class="form-input-container" name="st-login">
+        <label for="email">Email:</label>
+        <input type="email" name="email" maxlength="256" required />
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          maxlength="256"
+          required
+        />
+        <button class="dark-button" type="submit">LOG IN</button>
+      </form>
+    </section>
+
+    <!-- LOG IN FORM END -->
+
+    <!-- Menu START -->
+    <section class="menu-section">
+      <h2 class="white-font z-text">PURELY SWEET</h2>
+      <p class="menu-text white-font z-text">ICE CREAM</p>
+      <p>
+        <a class="button white-font z-text" href="sweets.html">SWEETS</a>
+      </p>
+      <img
+        class="menu-img"
+        src="{% static 'sweet_treat_app/img/menu-bg.png' %}"
+        alt="delicious dessert"
+      />
+    </section>
+    <!-- Menu END -->
+
+    <!-- FLavors START -->
+    <section class="flavors-section overflow">
+      <div class="width2 overflow">
+        <img
+          src=" {% static 'sweet_treat_app/img/ice-cream.jpg' %} "
+          alt="ice cream cones"
+        />
+      </div>
+      <div class="width2 flavors-text">
+        <div class="text-width">
+          <h2>YUMMY AND DELICIOUS</h2>
+          <h3>I SCREAM for ice cream!</h3>
+          <p>
+            Only the Freshest, Organic, Non-GMO, Gluten-free, no preservitives
+            added ingredients... without losing the
+            <span class="brand">Sweet Treats</span>, mouth watering delight!
+          </p>
+          <p>
+            <a class="dark-button" href="sweets.html">SWEETS</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Flavors END -->
+
+    <!-- Enjoy START -->
+    <section class="enjoy-section">
+      <h2 class="mt white-font z-text">Enjoy</h2>
+      <p class="enjoy-text white-font z-text">DAIRY FREE</p>
+      <p>
+        <a class="button white-font z-text" href="sweets.html">SWEETS</a>
+      </p>
+      <img
+        class="enjoy-img"
+        src=" {% static 'sweet_treat_app/img/enjoy-ice-cream.png' %} "
+        alt="delicious dessert"
+      />
+    </section>
+    <!-- Enjoy END -->
+
+    <!-- Our place START -->
+    <section class="ourplace-section overflow">
+      <div class="width2 ourplace-text">
+        <div class="text-width">
+          <h2>OUR PLACE</h2>
+          <h3>Ice Cream by the sea!</h3>
+          <p>
+            Relax at OUR PLACE and enjoy the refreshing sea breeze and soft
+            sandy beaches. Curl your toes under the hot sand as you indulge
+            yourself with amazing --
+            <span class="brand">Sweet Treats</span>.
+          </p>
+          <p>
+            <a class="dark-button" href="about.html">ABOUT</a>
+          </p>
+        </div>
+      </div>
+      <div class="width2 overflow">
+        <img
+          src=" {% static 'sweet_treat_app/img/ice-cream-seller.jpg' %} "
+          alt="ice cream seller"
+        />
+      </div>
+    </section>
+    <!-- Our place END -->
+
+    <!-- Get yours START -->
+    <section class="getyours-section">
+      <h2 class="mt white-font z-text">INSTANT</h2>
+      <p class="getyours-text white-font z-text">CLASSIC</p>
+      <p>
+        <a class="button white-font z-text" href="sweets.html">SWEETS</a>
+      </p>
+      <img
+        class="getyours-img"
+        src=" {% static 'sweet_treat_app/img/delivery-truck.png' %} "
+        alt="ice cream delivery truck"
+      />
+    </section>
+    <!-- Get yours END -->
+
+    <!-- Desserts START -->
+    <section class="desserts-section overflow">
+      <div class="width2 overflow">
+        <img
+          src=" {% static 'sweet_treat_app/img/dessert.jpg' %} "
+          alt="four row ice cream plate"
+        />
+      </div>
+      <div class="width2 desserts-text">
+        <div class="text-width">
+          <h2>YUMMY TREATS</h2>
+          <h3>You deserve to treat yourself!</h3>
+          <p>SIGN UP and LOG IN, NOW!</p>
+          <p>
+            Select your favorite mouth watering delights, see real-time
+            inventory, and be notified when your favorite
+            <span class="brand">Sweet Treats</span> are available. You'll also
+            join our amazing and tantalizing mailing list of glory!
+          </p>
+          <div class="desserts-btn">
+            <a id="btm-signup-btn" class="dark-button" href="#">SIGN UP</a>
+            <a id="btm-login-btn" class="dark-button" href="#">LOG IN</a>
+          </div>
+          <!-- Begin Mailchimp Signup Form -->
+          <link
+            href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <style type="text/css">
+            #mc_embed_signup {
+              background: var(--light-color);
+              clear: left;
+              font: 14px Helvetica, Arial, sans-serif;
+            }
+            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+            <form
+              action="https://herokuapp.us14.list-manage.com/subscribe/post?u=61e482f755bc0e7d9831414a5&amp;id=e84343d079"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate"
+              target="_blank"
+              novalidate
+            >
+              <div id="mc_embed_signup_scroll">
+                <h2>Mailing List</h2>
+                <div class="indicates-required">
+                  <span class="asterisk">*</span> indicates required
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL"
+                    >Email Address <span class="asterisk">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    value=""
+                    name="EMAIL"
+                    class="required email"
+                    id="mce-EMAIL"
+                  />
+                </div>
+                <div id="mce-responses" class="clear foot">
+                  <div
+                    class="response"
+                    id="mce-error-response"
+                    style="display: none"
+                  ></div>
+                  <div
+                    class="response"
+                    id="mce-success-response"
+                    style="display: none"
+                  ></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div
+                  style="position: absolute; left: -5000px"
+                  aria-hidden="true"
+                >
+                  <input
+                    type="text"
+                    name="b_61e482f755bc0e7d9831414a5_e84343d079"
+                    tabindex="-1"
+                    value=""
+                  />
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input
+                      type="submit"
+                      value="Subscribe"
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
+                      class="button"
+                    />
+                    <!-- <p class="brandingLogo">
+                  <a
+                    href="http://eepurl.com/hTurNb"
+                    title="Mailchimp - email marketing made easy and fun"
+                    ><img
+                      src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
+                  /></a>
+                </p> -->
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <script
+            type="text/javascript"
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+          ></script>
+          <script type="text/javascript">
+            (function ($) {
+              window.fnames = new Array();
+              window.ftypes = new Array();
+              fnames[0] = "EMAIL";
+              ftypes[0] = "email";
+              fnames[1] = "FNAME";
+              ftypes[1] = "text";
+              fnames[2] = "LNAME";
+              ftypes[2] = "text";
+              fnames[3] = "ADDRESS";
+              ftypes[3] = "address";
+              fnames[4] = "PHONE";
+              ftypes[4] = "phone";
+              fnames[5] = "BIRTHDAY";
+              ftypes[5] = "birthday";
+            })(jQuery);
+            var $mcj = jQuery.noConflict(true);
+          </script>
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+    </section>
+    <!-- Desserts END -->
+
+    <!-- Footer START -->
+    <footer class="footer-section">
+      <div class="address-text width2">
+        <div class="width3 address-text-content">
+          <h3>ADDRESS</h3>
+          <p>555 Sweets Dr. Sweetville,</p>
+          <p>SV 09283</p>
+        </div>
+        <div class="width3 address-text-content">
+          <h3>CONTACT</h3>
+          <p>info@sweets.io</p>
+          <p>Tel: 555-555-5555</p>
+        </div>
+        <div class="width3 address-text-content">
+          <h3>HOURS</h3>
+          <p>OPEN DAILY</p>
+          <p>8AM-8PM</p>
+        </div>
+      </div>
+
+      <div class="width2 social-img">
+        <h4><span class="brand">Sweet Treats</span> Social Networks</h4>
+        <p>Follow US on social media for the greatest social sweetness!</p>
+        <ul>
+          <li>
+            <a href="https://twitter.com"
+              ><img
+                src=" {% static 'sweet_treat_app/img/tweet.svg' %} "
+                alt="facebook icon social media"
+            /></a>
+          </li>
+          <li>
+            <a href="https://facebook.com"
+              ><img
+                src=" {% static 'sweet_treat_app/img/fb.svg' %} "
+                alt="twitter icon social media"
+            /></a>
+          </li>
+          <li>
+            <a href="https://instagram.com"
+              ><img
+                src=" {% static 'sweet_treat_app/img/instagram.svg' %} "
+                alt="instagram icon social media"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Footer END -->
+    <script src="{% static 'sweet_treat_app/js/index.js' %}"></script>
+  </body>
+</html>

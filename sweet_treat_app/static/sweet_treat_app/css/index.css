@@ -1,0 +1,634 @@
+:root {
+  --light-color: #fff;
+  --light-color-alpha: rgba(255, 255, 255, 0.7);
+  --light-color-9: rgba(255, 255, 255, 0.9);
+  --font-color: #5d6063;
+  --menu-background: #f9db79;
+  --enjoy-background: #b5e8d5;
+  --getyours-background: #ffbfb3;
+  --about-html-background: #c3a9d4;
+}
+
+/* GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--font-color);
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 1em;
+  font-size: 1.2rem;
+  transition: all 300ms ease;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+.hidden {
+  display: none;
+}
+
+.brand {
+  font-family: "Princess Sofia", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.button {
+  padding: 1em 2em;
+  color: var(--light-color);
+  background: none;
+  border: 2px solid var(--light-color);
+  font-weight: bold;
+  transition: all 300ms ease;
+}
+
+.button:hover,
+.dark-button:hover {
+  background: var(--font-color);
+  border: 2px solid var(--font-color);
+  cursor: pointer;
+}
+
+.dark-button {
+  padding: 1em 2em;
+  border: 2px solid var(--font-color);
+  font-weight: bold;
+  transition: all 300ms ease;
+  display: inline-block;
+}
+
+.dark-button:hover,
+.dark-button:focus {
+  color: var(--light-color);
+}
+
+.white-font {
+  color: var(--light-color);
+}
+
+.width3 {
+  width: 33%;
+}
+
+.width2 {
+  width: 50%;
+}
+
+.mt {
+  margin-top: 0;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.text-width {
+  max-width: 600px;
+  margin: 4em 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Announcement banner */
+.announcement-banner {
+  background: var(--font-color);
+  text-align: center;
+  color: var(--light-color);
+  padding: 0.1em 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4em;
+}
+
+.announcement-banner span {
+  font-size: inherit;
+}
+
+.announcement-btn {
+  color: var(--light-color);
+  transition: all 300ms ease;
+}
+
+.announcement-btn:hover,
+.announcement-btn:focus {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+/* Main Header */
+
+input[type="checkbox"] {
+  appearance: none;
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.main-header,
+.about-main-header,
+.sweets-main-header,
+.inventory-main-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--menu-background);
+  position: relative;
+}
+.main-header a:hover,
+.about-main-header a:hover,
+.sweets-main-header a:hover,
+.inventory-main-header a:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.nav-menu {
+  display: flex;
+}
+
+.log-in {
+  position: relative;
+  text-align: right;
+}
+
+.hello-user {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 0;
+  left: 1em;
+}
+
+/* REGISTER LOG IN FORMS */
+
+.form-container {
+  background: var(--light-color-alpha);
+  width: 350px;
+  padding: 1em;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 3;
+  box-shadow: 0 4px 8px -4px var(--font-color);
+}
+
+.form-container p {
+  text-align: center;
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--light-color-alpha);
+  padding: 1em;
+}
+
+.form-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.form-brand h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.form-brand img {
+  width: 80px;
+  top: 14%;
+  position: relative;
+}
+
+input {
+  border: 1px solid var(--font-color);
+  padding: 1em;
+  color: inherit;
+  font-family: inherit;
+  transition: all 300ms ease;
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 300ms;
+  transform-origin: top center;
+}
+
+@keyframes animatezoom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Menu section | Enjoy section | Getyours section */
+.menu-section,
+.enjoy-section,
+.getyours-section,
+.about-menu-section,
+.sweets-menu-section,
+.inventory-menu-section {
+  background: var(--menu-background);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.menu-text,
+.enjoy-text,
+.getyours-text {
+  font-size: 7.2rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+  margin: 0;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+
+.z-text {
+  position: relative;
+  z-index: 2;
+}
+.menu-img,
+.enjoy-img,
+.getyours-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 600px;
+  /* max-width: 100%; */
+  z-index: 1;
+}
+
+/* Flavors section | Ourplace section | Desserts section*/
+
+.desserts-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.desserts-section {
+  position: relative;
+}
+
+.flavors-section,
+.ourplace-section,
+.desserts-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flavors-text,
+.desserts-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 4em;
+}
+
+.flavors-section img,
+.ourplace-section img,
+.desserts-section img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/* Enjoy section */
+.enjoy-section {
+  background: var(--enjoy-background);
+  height: 600px;
+}
+
+/* Ourplace section */
+
+.ourplace-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4em;
+  text-align: center;
+}
+
+/* Getyours section */
+
+.getyours-section {
+  background: var(--getyours-background);
+  height: 600px;
+}
+
+/* Footer section */
+
+.footer-section {
+  background: var(--menu-background);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.address-text {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.address-text-content {
+  padding: 0 1em;
+  text-align: center;
+}
+.address-text-content p {
+  margin: 0;
+}
+
+.mailing-list {
+  width: 500px;
+  margin-left: 4em;
+}
+
+.mailing-list label {
+  font-size: 1.2rem;
+}
+
+.mailing-list input {
+  display: block;
+  font-size: 1.1em;
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 2px solid transparent;
+  transition: all 300ms ease;
+  font-family: inherit;
+  color: inherit;
+  font-weight: bold;
+}
+
+.mailing-list input:focus {
+  outline: none;
+  border: 2px solid var(--font-color);
+}
+
+.form-btn {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  background: inherit;
+  color: inherit;
+}
+
+.form-btn:hover {
+  cursor: pointer;
+}
+
+.social-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-img p {
+  margin: 0;
+}
+
+.social-img ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social-img a {
+  width: 32px;
+  height: 32px;
+  margin-left: 1em;
+  transition: all 300ms ease;
+}
+
+.social-img a:hover {
+  transform: translateY(-5px);
+}
+
+/*////////////////////////////// 
+// ABOUT.HTML
+ ////////////////////////////*/
+
+/* MAIN HEADER | MENU SECTION*/
+.about-main-header,
+.about-menu-section {
+  background: var(--about-html-background);
+}
+
+/*////////////////////////////// 
+// SWEETS.HTML
+ ////////////////////////////*/
+
+.bg-break {
+  min-height: 2rem;
+  /* box-shadow: 2px 2px 8px var(--enjoy-background); */
+}
+
+/* MAIN HEADER | MENU SECTION*/
+.sweets-main-header,
+.sweets-menu-section {
+  background: var(--enjoy-background);
+}
+
+@media (max-width: 1064px) {
+  /* GENERAL */
+
+  h1 {
+    margin: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .text-width {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .width3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .width2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* ANNOUNCEMENT BANNER */
+  .announcement-banner p {
+    padding: 0 1em;
+  }
+
+  /* MAIN HEADER */
+
+  .log-in {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-menu {
+    justify-content: center;
+  }
+  .nav-menu {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    min-width: 100vw;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--light-color-9);
+    z-index: 4;
+    padding: 2em 0;
+    font-weight: bold;
+  }
+
+  .navigation-menu {
+    display: none;
+  }
+
+  .main-header,
+  .about-main-header,
+  .sweets-main-header,
+  .inventory-main-header {
+    padding-top: 4em;
+    position: relative;
+  }
+
+  input[type="checkbox"] {
+    width: 60px;
+    height: 60px;
+  }
+
+  input[type="checkbox"].hamburger-menu {
+    background: url(../img/hamburger.svg);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    border: none;
+    outline: none;
+  }
+
+  /* Menu section | Enjoy section | Getyours section */
+
+  .menu-text,
+  .enjoy-text,
+  .getyours-text {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  /* Ourplace section */
+
+  .ourplace-text {
+    padding: 1em;
+  }
+
+  /* Flavors section | Ourplace section | Desserts section*/
+
+  .flavors-text,
+  .desserts-text {
+    padding: 1em;
+  }
+  .flavors-section,
+  .ourplace-section,
+  .desserts-section {
+    height: auto;
+  }
+
+  .desserts-btn {
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  .social-img {
+    padding: 1em;
+    text-align: center;
+  }
+  .address-text {
+    width: 100%;
+    padding: 1em;
+  }
+
+  /*////////////////////////////// 
+// SWEETS.HTML
+ ////////////////////////////*/
+
+  .order1 {
+    order: 2;
+  }
+  .order2 {
+    order: 1;
+  }
+}
+
+@media (max-width: 405px) {
+  /* HEADER */
+
+  /* Register / Log in form */
+
+  .form-container {
+    width: 375px;
+    top: 0;
+    right: 0;
+  }
+  .desserts-btn {
+    flex-direction: column;
+  }
+}
