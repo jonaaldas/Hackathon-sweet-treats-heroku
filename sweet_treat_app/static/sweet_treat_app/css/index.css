@@ -128,7 +128,7 @@ h4 {
   color: var(--light-color);
   padding: 0.1em 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 4em;
 }
 
