@@ -34,7 +34,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  margin: 1em;
+  margin-right: 1em;
   font-size: 1.2rem;
   transition: all 300ms ease;
   display: inline-block;
@@ -57,6 +57,7 @@ h4 {
 }
 
 .brand {
+  position: relative;
   font-family: "Princess Sofia", cursive;
   font-size: 2.5rem;
   text-align: center;
@@ -178,18 +179,19 @@ input[type="checkbox"] {
 }
 .nav-menu {
   display: flex;
+  width: 100%;
 }
 
 .log-in {
-  position: relative;
   text-align: right;
 }
 
 .hello-user {
   position: absolute;
   font-size: 1.2rem;
-  top: 0;
-  left: 1em;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* REGISTER LOG IN FORMS */
@@ -477,50 +479,20 @@ input:focus {
   background: var(--enjoy-background);
 }
 
-@media (max-width: 1064px) {
-  /* GENERAL */
-
+@media (max-width: 1150px) {
   h1 {
     margin: 0;
   }
 
-  h2 {
-    margin-top: 0;
+  .hello-user {
+    top: 11%;
   }
-
-  .text-width {
-    max-width: 100%;
-    margin-top: 0;
-  }
-
-  .width3 {
-    width: 100%;
-    text-align: center;
-  }
-
-  .width2 {
-    width: 100%;
-    padding: 0;
-  }
-
-  /* ANNOUNCEMENT BANNER */
-  .announcement-banner p {
-    padding: 0 1em;
-  }
-
   /* MAIN HEADER */
 
   .log-in {
     display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav-menu {
     justify-content: center;
-  }
-  .nav-menu {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 1em;
   }
 
   .nav-menu {
@@ -535,6 +507,10 @@ input:focus {
     z-index: 4;
     padding: 2em 0;
     font-weight: bold;
+    font-size: 2rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
   }
 
   .navigation-menu {
@@ -567,6 +543,34 @@ input:focus {
 
   .hamburger-menu:hover {
     cursor: pointer;
+  }
+
+  .width3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 930px) {
+  /* GENERAL */
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .text-width {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .width2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* ANNOUNCEMENT BANNER */
+  .announcement-banner p {
+    padding: 0 1em;
   }
 
   /* Menu section | Enjoy section | Getyours section */
