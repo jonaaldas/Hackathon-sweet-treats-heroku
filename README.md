@@ -2,6 +2,9 @@
 
 Path to find inventory.js code 
  [sweet_treat_app](https://github.com/jonaaldas/Hackathon-sweet-treats-heroku/tree/main/sweet_treat_app)/[static](https://github.com/jonaaldas/Hackathon-sweet-treats-heroku/tree/main/sweet_treat_app/static)/[sweet_treat_app](https://github.com/jonaaldas/Hackathon-sweet-treats-heroku/tree/main/sweet_treat_app/static/sweet_treat_app)/[js](https://github.com/jonaaldas/Hackathon-sweet-treats-heroku/tree/main/sweet_treat_app/static/sweet_treat_app/js)
+ 
+[Live Demo](https://whispering-refuge-58700.herokuapp.com/index.html)
+[YouTube](https://www.youtube.com/watch?v=hNyYrOG7ApM)
 
 ## Overview
 
